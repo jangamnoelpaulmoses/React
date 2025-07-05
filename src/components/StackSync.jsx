@@ -9,7 +9,7 @@ import { ArrowUpRightIcon, ClipboardIcon } from '@heroicons/react/24/outline';
 const stacksyncCards = [
   {
     title: "1. GitHub Repository",
-    icon: "/src/assets/github.png",
+    icon: "/github.png",
     link: "https://github.com/jangamnoelpaulmoses/stacksync",
   },
   {
