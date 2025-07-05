@@ -6,11 +6,11 @@ const App = () => {
   return (
     <BrowserRouter>
       <div className="relative z-0 bg-primary">
-        {/* ✅ Navbar is always shown */}
+        {/* Navbar is always shown */}
         <Navbar />
 
         <Routes>
-          {/* ✅ Home route */}
+          {/*  Home route */}
           <Route
             path="/"
             element={
@@ -31,7 +31,7 @@ const App = () => {
             }
           />
 
-          {/* ✅ StackSync route */}
+          {/*  StackSync route */}
           <Route path="/stacksync" element={<StackSync />} />
         </Routes>
       </div>
