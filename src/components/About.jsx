@@ -50,14 +50,14 @@ const About = () => {
 
       {isMobile ? (
         <p className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Software Engineer with 3+ years of experience building scalable web applications, cloud platforms, and automation tools. Holds a Master’s in Computer Science from Arizona State University, with expertise in full-stack development, AWS infrastructure, and performance-focused engineering. Proven success across Amazon, TCS, and startups, delivering impactful solutions in healthcare tech, developer tooling and software development.
+          Software Engineer with over 4 years of experience building scalable web applications, cloud platforms, and automation tools. Holds a Master’s in Computer Science from Arizona State University, with expertise in full-stack development, AWS infrastructure, and performance-focused engineering. Proven success across Amazon, TCS, and startups, delivering impactful solutions in healthcare tech, developer tooling and software development.
         </p>
       ) : (
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
           className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
         >
-          Software Engineer with 3+ years of experience building scalable web applications, cloud platforms, and automation tools. Holds a Master’s in Computer Science from Arizona State University, with expertise in full-stack development, AWS infrastructure, and performance-focused engineering. Proven success across Amazon, TCS, and startups, delivering impactful solutions in healthcare tech, developer tooling and software development.
+          Software Engineer with over 4 years of experience building scalable web applications, cloud platforms, and automation tools. Holds a Master’s in Computer Science from Arizona State University, with expertise in full-stack development, AWS infrastructure, and performance-focused engineering. Proven success across Amazon, TCS, and startups, delivering impactful solutions in healthcare tech, developer tooling and software development.
         </motion.p>
       )}
 

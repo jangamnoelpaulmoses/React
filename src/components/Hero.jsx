@@ -21,10 +21,10 @@ const projects = [
     description: (
       <>
         <span className="md:hidden">
-          Software Engineer (3+ YOE) & MS CS @ ASU.
+          Software Engineer (4 YOE) & MS CS @ ASU.
         </span>
         <span className="hidden md:inline">
-          Software Engineer with 3+ years of experience and a Master’s in Computer Science from Arizona State University.
+          Software Engineer with over 4 years of experience and a Master’s in Computer Science from Arizona State University.
         </span>
       </>
     ),
@@ -149,7 +149,7 @@ const Hero = () => {
               Noel's <span className="text-[#6738cb]">Portfolio</span>
             </h1>
             <p className={`${styles.heroSubText} mt-2 text-white-100 md:hidden`}>
-            Software Engineer with 3+ YOE, specialized in Full Stack, AWS, and Software Development <br/> 
+            Software Engineer with over 4 YOE, specialized in Full Stack, AWS, and Software Development <br/> 
             </p>
            
           </div>
