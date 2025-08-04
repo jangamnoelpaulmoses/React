@@ -77,7 +77,7 @@ const StackSync = () => {
   const [timeLeft, setTimeLeft] = useState({});
   const [isMobile, setIsMobile] = useState(false);
 
-  const expiryDate = new Date("2025-07-19T00:00:00Z").getTime() + 14 * 24 * 60 * 60 * 1000;
+  const expiryDate = new Date("2025-08-10T00:00:00Z").getTime() + 14 * 24 * 60 * 60 * 1000;
 
   useEffect(() => {
     setIsMobile(window.innerWidth < 768);
