@@ -224,7 +224,7 @@ import {
   
   const projects = [
     {
-      name: "Apply Beast Chrome Extension",
+      name: "HireHack.ai Chrome Extension",
       description:
         "Developed a smart Chrome extension that automates job applications on LinkedIn. It detects Easy Apply jobs, auto-fills forms, manages application flow, and enables users to apply to 50+ jobs in minutes with minimal input.",
       tags: [
@@ -242,14 +242,14 @@ import {
         },
       ],
       image: "/extension.png", // Replace with the correct image import
-      source_code_link: "https://applybeast.com/",
+      source_code_link: "https://chromewebstore.google.com/detail/hirehack-ai/pgjgjjkabhhjkaiaeofjfdelplcablbj",
       useExternalLinkIcon: true,
       
     },
     {
-      name: "Apply Beast Personalized Dashboard",
+      name: "HireHack.ai Personalized Dashboard",
       description:
-        "Built a full-stack dashboard for ApplyBeast to track usage, job stats, and form preferences. Integrated subscription handling, secure auth, user feedback, and resume analysis using PostgreSQL, Supabase, and Vercel.",
+        "Built a full-stack dashboard for HireHack Ai to track usage, job stats, and form preferences. Integrated subscription handling, secure auth, user feedback, and resume analysis using PostgreSQL, Supabase, and Vercel.",
       tags: [
         {
           name: "NextJS",
@@ -265,7 +265,7 @@ import {
         },
       ],
       image: "dashboard.png", // Replace with the correct image import
-     source_code_link: "https://app.applybeast.com/dashboard", // or repo if public
+     source_code_link: "https://app.hirehack.ai", // or repo if public
      useExternalLinkIcon: true,
     },
     

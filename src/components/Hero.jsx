@@ -33,12 +33,12 @@ const projects = [
   {
     title: (
       <a
-        href="https://applybeast.com"
+        href="https://hirehack.ai"
         target="_blank"
         rel="noopener noreferrer"
         className="hover:underline text-[#8ab4f8] flex items-center gap-2"
       >
-        Apply Beast | NextJS, NodeJS, PostgreSQL
+        HireHack.ai | NextJS, NodeJS, PostgreSQL
         <FiExternalLink className="text-white text-2xl" />
       </a>
     ),
@@ -52,7 +52,7 @@ const projects = [
         </span>
       </>
     ),
-    image: "/applybeast.png",
+    image: "/hirehack.png",
   },
   {
     title: (
