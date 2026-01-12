@@ -124,7 +124,7 @@ const DesignCard = ({ index, name, description, website, image, tags, isMobile }
     return (
       <div
         onClick={handleClick}
-        className="bg-black-200 p-5 rounded-2xl sm:w-[360px] w-full shadow-card cursor-pointer"
+        className="bg-black-200 p-2 rounded-2xl sm:w-[360px] w-full shadow-card cursor-pointer"
       >
         <CardContent />
       </div>
@@ -164,20 +164,18 @@ const Designs = () => {
 
   return (
     <section className="relative w-full min-h-screen mx-auto pb-20">
-      <div className={`${styles.paddingX} max-w-7xl mx-auto mt-20`}>
+      <div className={`${styles.paddingX} max-w-7xl mx-auto mt-16 md:mt-20`}>
         {!isMobile ? (
           <motion.div variants={textVariant()}>
             <p className={`${styles.sectionSubText} font-semibold`}>
               Client Projects & Web Solutions
             </p>
-            <h2 className={styles.sectionHeadText}>Design Showcase</h2>
+            <h2 className={`${styles.sectionHeadText} p-2`} >Designs</h2>
           </motion.div>
         ) : (
           <div>
-            <p className={`${styles.sectionSubText} font-light`}>
-              Client Projects & Web Solutions
-            </p>
-            <h2 className={styles.sectionHeadText}>Design Showcase</h2>
+        
+            <h2 className={`${styles.sectionHeadText} p-2`}>Designs </h2>
           </div>
         )}
 
@@ -194,8 +192,6 @@ const Designs = () => {
           ) : (
             <p className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
               Explore a collection of websites I've designed and developed for businesses across various industries.
-              Each project showcases my ability to create professional, user-friendly, and visually appealing web solutions
-              tailored to meet specific business needs and deliver exceptional user experiences.
             </p>
           )}
         </div>
