@@ -230,6 +230,13 @@ const Designs = () => {
           <Contact />
         </div>
       </div>
+      <a
+  href="#contact"
+  className="fixed bottom-6 right-6 z-50 px-6 py-3 rounded-full bg-[#915EFF] text-white font-semibold shadow-2xl hover:scale-105 transition"
+>
+  Contact Me
+</a>
+
     </section>
   );
 };
