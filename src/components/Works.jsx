@@ -18,6 +18,10 @@ const ProjectCard = ({
   useExternalLinkIcon,
   isMobile,
 }) => {
+  const handleCardClick = () => {
+    window.open(source_code_link, "_blank", "noopener,noreferrer");
+  };
+
   const CardContent = () => (
     <>
       <div className="relative w-full h-[230px] shadow-card">
@@ -26,11 +30,9 @@ const ProjectCard = ({
           alt={name}
           className="w-full h-full object-cover rounded-2xl"
         />
-        <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-          <div
-            onClick={() => window.open(source_code_link, "_blank")}
-            className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
-          >
+
+        <div className="absolute inset-0 flex justify-end m-3 pointer-events-none">
+          <div className="black-gradient w-10 h-10 rounded-full flex justify-center items-center">
             {useExternalLinkIcon ? (
               <FiExternalLink className="text-white text-lg" />
             ) : (
@@ -61,14 +63,21 @@ const ProjectCard = ({
 
   if (isMobile) {
     return (
-      <div className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+      <div
+        onClick={handleCardClick}
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full cursor-pointer"
+      >
         <CardContent />
       </div>
     );
   }
 
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.5, 0.75)}
+      onClick={handleCardClick}
+      className="cursor-pointer"
+    >
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
         className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
@@ -78,6 +87,7 @@ const ProjectCard = ({
     </motion.div>
   );
 };
+
 
 const Works = () => {
   const [isMobile, setIsMobile] = useState(false);

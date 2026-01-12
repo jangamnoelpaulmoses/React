@@ -10,21 +10,21 @@ import { StarsCanvas } from './canvas';
 
 const designProjects = [
   {
-    name: "Aastha Glass",
+    name: "AasthaGlass.com",
     description: "Professional website for a glass manufacturing and distribution business, featuring product catalogs, service offerings, and client testimonials.",
     website: "https://aasthaglass.com",
     image: "/designs/aasthaglass.png",
     tags: ["E-Commerce", "Manufacturing", "Responsive Design"],
   },
   {
-    name: "Gynocares",
+    name: "GynoCares.com",
     description: "Healthcare website for gynecology services, designed with patient-friendly interface, appointment booking, and comprehensive medical information.",
     website: "https://gynocares.com",
     image: "/designs/gynocares.png",
     tags: ["Healthcare", "Medical Services", "UI/UX"],
   },
   {
-    name: "Sugnan",
+    name: "Sugnan.com",
     description: "Modern business website showcasing services and expertise with clean design, smooth animations, and optimized user experience.",
     website: "https://sugnan.com",
     image: "/designs/sugnan.png",
@@ -119,8 +119,8 @@ const Designs = () => {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen mx-auto">
-      <div className={`${styles.paddingX} max-w-7xl mx-auto`}>
+    <section className="relative w-full min-h-screen mx-auto pb-20">
+      <div className={`${styles.paddingX} max-w-7xl mx-auto mt-20`}>
         {!isMobile ? (
           <motion.div variants={textVariant()}>
             <p className={`${styles.sectionSubText} font-semibold`}>
@@ -130,7 +130,7 @@ const Designs = () => {
           </motion.div>
         ) : (
           <div>
-            <p className={`${styles.sectionSubText} font-semibold`}>
+            <p className={`${styles.sectionSubText} font-light`}>
               Client Projects & Web Solutions
             </p>
             <h2 className={styles.sectionHeadText}>Design Showcase</h2>

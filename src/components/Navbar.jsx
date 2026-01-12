@@ -37,7 +37,7 @@ const Navbar = () => {
     </a>
   </li>
 
-  <li>
+  {/* <li>
     <Link
       to="/designs"
       className={`${
@@ -47,7 +47,7 @@ const Navbar = () => {
     >
       Designs
     </Link>
-  </li>
+  </li> */}
 
   {navLinks.slice(0, 1).map((navLink) => (
     <li
@@ -87,7 +87,7 @@ const Navbar = () => {
             <ul className='list-none flex justify-end items-start flex-col gap-4'>
   {/* Download Resume in Mobile */}
 
-  <li>
+  {/* <li>
     <Link
       to="/designs"
       className={`${
@@ -100,7 +100,7 @@ const Navbar = () => {
     >
       Designs
     </Link>
-  </li>
+  </li> */}
 
   {navLinks.map((navLink) => (
     <li

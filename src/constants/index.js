@@ -337,6 +337,29 @@ import {
       image: reactwebsite,
       source_code_link: "https://noelpaulmoses.com/",
     },
+    {
+      name: "More Web Projects",
+      description:
+        "Designed and developed multiple production-grade business websites including Aastha Glass, Sugnan, and GynoCares. These projects focus on clean UI, responsive layouts, performance optimization, and conversion-focused design tailored for real businesses.",
+      tags: [
+        {
+          name: "WebDesign",
+          color: "blue-text-gradient",
+        },
+        {
+          name: "BusinessWebsites",
+          color: "green-text-gradient",
+        },
+        {
+          name: "UIUX",
+          color: "pink-text-gradient",
+        },
+      ],
+      image: "/designs/designs.png",
+      source_code_link: "/designs",
+      useExternalLinkIcon: true,
+    }
+    
   ];
   
   export { services, technologies, experiences, testimonials, projects };
