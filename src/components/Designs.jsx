@@ -10,29 +10,72 @@ import { StarsCanvas } from './canvas';
 
 const designProjects = [
   {
-    name: "AasthaGlass.com",
-    description: "Professional website for a glass manufacturing and distribution business, featuring product catalogs, service offerings, and client testimonials.",
-    website: "https://aasthaglass.com",
-    image: "/designs/designs.png",
-    tags: ["E-Commerce", "Manufacturing", "Responsive Design"],
+  name: "AasthaGlass.com",
+  description:
+    "Professional website for a glass manufacturing and distribution business, featuring service showcases, project galleries, and lead-generation flows.",
+  website: "https://aasthaglass.com",
+  image: "/designs/designs.png",
+  tags: ["Manufacturing", "Business Website", "Responsive Design"],
+},
+  {
+    name: "HireHack.ai",
+    description:
+      "Public marketing website for HireHack, an AI-powered job application automation platform. Designed for high conversion, clarity of value proposition, and fast onboarding.",
+    website: "https://hirehack.ai",
+    image: "/designs/hh.png",
+    tags: ["AI", "SaaS", "Startup", "Landing Page"],
   },
   {
+    name: "Omada.ai Grader",
+    description:
+      "Landing and application interface for Omada’s AI-powered social media grading tool, optimized for conversion, speed, and clear user feedback.",
+    website: "https://grader.omada.ai",
+    image: "/designs/omada.png",
+    tags: ["AI", "SaaS", "Product Design", "Landing Page"],
+  },
+  {
+    name: "HireHack Dashboard",
+    description:
+      "Authenticated web application dashboard for HireHack users to manage applications, resumes, usage metrics, and subscriptions with a clean, scalable UI.",
+    website: "https://app.hirehack.ai",
+    image: "/designs/hhdash.png",
+    tags: ["SaaS", "Dashboard", "Product UI", "Web App"],
+  },
+  {
+    name: "Naviget.com",
+    description:
+      "Primary website for Naviget’s healthcare platform, designed to communicate product vision, clinical trust, and scalability across global and India-specific audiences.",
+    website: "https://naviget.com",
+    image: "/designs/naviget.png",
+    tags: ["Healthcare", "SaaS", "Startup", "Responsive Design"],
+  },
+
+
+  {
     name: "GynoCares.com",
-    description: "Healthcare website for gynecology services, designed with patient-friendly interface, appointment booking, and comprehensive medical information.",
+    description:
+      "Healthcare website for gynecology services with appointment booking, patient education content, and a clean, accessible UI.",
     website: "https://gynocares.com",
     image: "/designs/gynocares.png",
     tags: ["Healthcare", "Medical Services", "UI/UX"],
   },
   {
     name: "Sugnan.com",
-    description: "Modern business website showcasing services and expertise with clean design, smooth animations, and optimized user experience.",
+    description:
+      "Modern website highlighting solar business services and expertise with smooth animations and performance-focused design.",
     website: "https://sugnan.com",
     image: "/designs/sugnan.png",
-    tags: ["Business", "Corporate", "Modern Design"],
+    tags: ["Business", "Solar", "Modern Design"],
   },
 ];
 
+
+
 const DesignCard = ({ index, name, description, website, image, tags, isMobile }) => {
+  const handleClick = () => {
+    window.open(website, "_blank", "noopener,noreferrer");
+  };
+
   const CardContent = () => (
     <>
       <div className="relative w-full h-[280px] shadow-card rounded-2xl overflow-hidden group">
@@ -41,34 +84,27 @@ const DesignCard = ({ index, name, description, website, image, tags, isMobile }
           alt={name}
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           onError={(e) => {
-            e.target.src = '/designs/image.png';
+            e.target.src = "/designs/image.png";
           }}
         />
+
+        {/* Hover overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-          <a
-            href={website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-white text-lg font-semibold hover:text-[#915EFF] transition"
-          >
+          <div className="flex items-center gap-2 text-white text-lg font-semibold">
             Visit Website <FiExternalLink className="text-xl" />
-          </a>
+          </div>
         </div>
       </div>
 
       <div className="mt-5">
         <div className="flex items-center justify-between">
           <h3 className="text-white font-bold text-[24px]">{name}</h3>
-          <a
-            href={website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-[#915EFF] hover:text-white transition"
-          >
-            <FiExternalLink className="text-2xl" />
-          </a>
+          <FiExternalLink className="text-[#915EFF] text-2xl" />
         </div>
-        <p className="mt-2 text-[14px] text-secondary leading-relaxed">{description}</p>
+
+        <p className="mt-2 text-[14px] text-secondary leading-relaxed">
+          {description}
+        </p>
       </div>
 
       <div className="mt-4 flex flex-wrap gap-2">
@@ -86,14 +122,21 @@ const DesignCard = ({ index, name, description, website, image, tags, isMobile }
 
   if (isMobile) {
     return (
-      <div className="bg-black-200 p-5 rounded-2xl sm:w-[360px] w-full shadow-card">
+      <div
+        onClick={handleClick}
+        className="bg-black-200 p-5 rounded-2xl sm:w-[360px] w-full shadow-card cursor-pointer"
+      >
         <CardContent />
       </div>
     );
   }
 
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.3, 0.75)}>
+    <motion.div
+      variants={fadeIn("up", "spring", index * 0.3, 0.75)}
+      onClick={handleClick}
+      className="cursor-pointer"
+    >
       <Tilt
         options={{ max: 20, scale: 1.02, speed: 450 }}
         className="bg-black-200 p-5 rounded-2xl sm:w-[360px] w-full shadow-card"
@@ -103,6 +146,7 @@ const DesignCard = ({ index, name, description, website, image, tags, isMobile }
     </motion.div>
   );
 };
+
 
 const Designs = () => {
   const [isMobile, setIsMobile] = useState(false);
