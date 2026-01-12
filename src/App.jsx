@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar, About, Contact, Experience, Feedbacks, Hero, Tech, Works, StarsCanvas } from './components';
-import StackSync from './components/StackSync'; // or wherever your StackSync file is
+import StackSync from './components/StackSync';
+import Designs from './components/Designs';
 
 const App = () => {
   return (
@@ -33,6 +34,14 @@ const App = () => {
 
           {/*  StackSync route */}
           <Route path="/stacksync" element={<StackSync />} />
+
+          {/*  Designs route */}
+          <Route path="/designs" element={
+            <>
+              <Designs />
+              <StarsCanvas />
+            </>
+          } />
         </Routes>
       </div>
     </BrowserRouter>

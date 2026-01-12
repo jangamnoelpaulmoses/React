@@ -37,6 +37,18 @@ const Navbar = () => {
     </a>
   </li>
 
+  <li>
+    <Link
+      to="/designs"
+      className={`${
+        active === "Designs" ? "text-white" : "text-secondary"
+      } hover:text-white text-[18px] font-medium cursor-pointer`}
+      onClick={() => setActive("Designs")}
+    >
+      Designs
+    </Link>
+  </li>
+
   {navLinks.slice(0, 1).map((navLink) => (
     <li
       key={navLink.id}
@@ -75,6 +87,20 @@ const Navbar = () => {
             <ul className='list-none flex justify-end items-start flex-col gap-4'>
   {/* Download Resume in Mobile */}
 
+  <li>
+    <Link
+      to="/designs"
+      className={`${
+        active === "Designs" ? "text-white" : "text-secondary"
+      } font-poppins font-medium cursor-pointer text-[16px]`}
+      onClick={() => {
+        setToggle(!toggle);
+        setActive("Designs");
+      }}
+    >
+      Designs
+    </Link>
+  </li>
 
   {navLinks.map((navLink) => (
     <li
