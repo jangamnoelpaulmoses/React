@@ -13,7 +13,7 @@ const designProjects = [
     name: "AasthaGlass.com",
     description: "Professional website for a glass manufacturing and distribution business, featuring product catalogs, service offerings, and client testimonials.",
     website: "https://aasthaglass.com",
-    image: "/designs/aasthaglass.png",
+    image: "/designs/designs.png",
     tags: ["E-Commerce", "Manufacturing", "Responsive Design"],
   },
   {
