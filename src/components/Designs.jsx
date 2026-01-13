@@ -29,7 +29,7 @@ const designProjects = [
     name: "Omada.ai Grader",
     description:
       "Landing and application interface for Omada’s AI-powered social media grading tool, optimized for conversion, speed, and clear user feedback.",
-    website: "https://grader.omada.ai",
+    website: "http://grader.omada.ai",
     image: "/designs/omada.png",
     tags: ["AI", "SaaS", "Product Design", "Landing Page"],
   },
