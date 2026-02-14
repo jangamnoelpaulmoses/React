@@ -5,7 +5,7 @@ const FUNNY_NO_TEXTS = [
     "No",
     "Are you sure?",
     "Really sure?",
-    "Pls don't do this to me 🥺",
+    "don't do this to me",
     "I'm gonna cry...",
     "You're breaking my heart 💔",
     "I'm already picking out outfits!",
@@ -13,7 +13,7 @@ const FUNNY_NO_TEXTS = [
     "Fine, I'll ask your mom instead",
     "She said yes btw",
     "Ok but like... seriously?",
-    "PLEASE 🙏🙏🙏",
+    "noooo",
     "I'll learn to cook for you!",
     "I'll even watch your boring shows",
     "Last chance... 👀",
@@ -219,10 +219,10 @@ const Valentine = () => {
                         animate={{ y: 0, opacity: 1 }}
                         transition={{ delay: 0.9 }}
                     >
-                        Now let's go get some chocolate 🍫🌹
+                         let's meet in san jose then
                     </motion.p>
 
-                    <motion.div
+                    {/* <motion.div
                         className="mt-8 flex justify-center gap-4 text-5xl"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -241,7 +241,7 @@ const Valentine = () => {
                                 {emoji}
                             </motion.span>
                         ))}
-                    </motion.div>
+                    </motion.div> */}
 
                     {/* View My Gift Button */}
                     <AnimatePresence>
@@ -373,18 +373,18 @@ const Valentine = () => {
                 <AnimatePresence mode="wait">
                     <motion.p
                         key={noCount}
-                        className="text-white/60 text-lg mb-10 min-h-[28px]"
+                        className="text-white/60 text-lg min-h-[28px]"
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -10 }}
                         transition={{ duration: 0.3 }}
                     >
                         {noCount === 0
-                            ? "Pretty please? 🥺👉👈"
+                            ? "👉👈"
                             : noCount <= 3
                                 ? "Wrong button!! Try again 😤"
                                 : noCount <= 8
-                                    ? "The Yes button is RIGHT THERE ➡️"
+                                    ? "The Yes button is RIGHT THERE "
                                     : noCount <= 14
                                         ? "I'm literally begging at this point 🧎"
                                         : "You're a menace and I love it 😩"}
