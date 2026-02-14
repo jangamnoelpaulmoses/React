@@ -92,16 +92,26 @@ const Valentine = () => {
     const [countdown, setCountdown] = useState(null); // null = not started, 3/2/1/0 = counting
     const [noButtonStyle, setNoButtonStyle] = useState({});
     const containerRef = useRef(null);
+    const newTabRef = useRef(null);
 
     useEffect(() => {
         if (countdown === null) return;
         if (countdown === 0) {
-            window.open('https://www.shefalisaini.com', '_blank');
+            // Redirect the pre-opened tab
+            if (newTabRef.current) {
+                newTabRef.current.location.href = 'https://www.shefalisaini.com';
+            }
             return;
         }
         const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
         return () => clearTimeout(timer);
     }, [countdown]);
+
+    const handleViewGift = () => {
+        // Open blank tab on user click (won't be blocked)
+        newTabRef.current = window.open('about:blank', '_blank');
+        setCountdown(3);
+    };
 
     const yesButtonSize = Math.min(noCount * 20 + 16, 80);
     const noButtonSize = Math.max(16 - noCount * 1.5, 6);
@@ -262,7 +272,7 @@ const Valentine = () => {
                                 }}
                                 whileHover={{ scale: 1.08, backgroundColor: 'rgba(255,255,255,0.35)' }}
                                 whileTap={{ scale: 0.95 }}
-                                onClick={() => setCountdown(3)}
+                                onClick={handleViewGift}
                             >
                                 View My Gift 🎁
                             </motion.button>
