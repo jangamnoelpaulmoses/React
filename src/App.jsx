@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Navbar, About, Contact, Experience, Feedbacks, Hero, Tech, Works, StarsCanvas } from './components';
 import StackSync from './components/StackSync';
 import Designs from './components/Designs';
+import Valentine from './components/Valentine';
 
 const App = () => {
   return (
@@ -42,6 +43,9 @@ const App = () => {
               <StarsCanvas />
             </>
           } />
+
+          {/*  Valentine route */}
+          <Route path="/valentine" element={<Valentine />} />
         </Routes>
       </div>
     </BrowserRouter>
