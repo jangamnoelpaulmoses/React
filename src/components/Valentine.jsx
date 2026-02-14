@@ -208,17 +208,10 @@ const Valentine = () => {
                         transition={{ delay: 0.3 }}
                         style={{ fontFamily: "'Playfair Display', serif" }}
                     >
-                        YAYYY!! 💕
+                        YAYYY!!
                     </motion.h1>
 
-                    <motion.p
-                        className="text-xl md:text-3xl text-white/90 font-medium"
-                        initial={{ y: 30, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.6 }}
-                    >
-                        I knew you'd say yes! 🥹💖
-                    </motion.p>
+                  
 
                     <motion.p
                         className="text-lg md:text-xl text-white/70 mt-4"
