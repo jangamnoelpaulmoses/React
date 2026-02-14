@@ -160,7 +160,7 @@ const Valentine = () => {
 
     if (yesPressed) {
         return (
-            <div className="min-h-screen bg-gradient-to-br from-pink-400 via-red-400 to-rose-500 flex items-center justify-center relative overflow-hidden">
+            <div className="min-h-screen bg-gradient-to-br flex items-center justify-center relative overflow-hidden">
                 <Confetti />
 
                 {/* Background pulsing hearts */}
@@ -320,7 +320,7 @@ const Valentine = () => {
                                 initial={{ opacity: 0, y: 10 }}
                                 animate={{ opacity: 1, y: 0 }}
                             >
-                                🎁 Gift opened in a new tab! 💕
+                                🎁 Gift opened in a new tab! if not, go to shefalisaini.com lol 💕
                             </motion.p>
                         )}
                     </AnimatePresence>
