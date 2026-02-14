@@ -92,15 +92,18 @@ const Valentine = () => {
     const [countdown, setCountdown] = useState(null); // null = not started, 3/2/1/0 = counting
     const [noButtonStyle, setNoButtonStyle] = useState({});
     const containerRef = useRef(null);
-    const newTabRef = useRef(null);
 
     useEffect(() => {
         if (countdown === null) return;
         if (countdown === 0) {
-            // Redirect the pre-opened tab
-            if (newTabRef.current) {
-                newTabRef.current.location.href = 'https://www.shefalisaini.com';
-            }
+            // Use a temporary anchor to open in new tab without popup blocker
+            const a = document.createElement('a');
+            a.href = 'https://www.shefalisaini.com';
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
             return;
         }
         const timer = setTimeout(() => setCountdown(countdown - 1), 1000);
@@ -108,8 +111,6 @@ const Valentine = () => {
     }, [countdown]);
 
     const handleViewGift = () => {
-        // Open blank tab on user click (won't be blocked)
-        newTabRef.current = window.open('about:blank', '_blank');
         setCountdown(3);
     };
 
