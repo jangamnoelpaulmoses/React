@@ -20,7 +20,7 @@ const designProjects = [
   {
     name: "HireHack.ai",
     description:
-      "Public marketing website for HireHack, an AI-powered job application automation platform. Designed for high conversion, clarity of value proposition, and fast onboarding.",
+      "Landing page for HireHack AI, an AI-powered job application automation platform. Designed for high conversion, clarity of value proposition, and fast onboarding.",
     website: "https://hirehack.ai",
     image: "/designs/hh.png",
     tags: ["AI", "SaaS", "Startup", "Landing Page"],
@@ -28,8 +28,8 @@ const designProjects = [
   {
     name: "Omada.ai Grader",
     description:
-      "Landing and application interface for Omada’s AI-powered social media grading tool, optimized for conversion, speed, and clear user feedback.",
-    website: "http://grader.omada.ai",
+      "Powerful AI powered tool to grade your business social media performance and engagement.",
+    website: "https://grader.omada.ai",
     image: "/designs/omada.png",
     tags: ["AI", "SaaS", "Product Design", "Landing Page"],
   },
